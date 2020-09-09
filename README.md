@@ -7,16 +7,19 @@ I followed the preprocessing by @kyuyeonpoor's [nsl-kdd-autoencoder](https://git
 
 ## Reconsturction Based Models
 * AE (Autoencoder)
+* DSEBM (Deep Structed Energy Based Model)
+* MEMAE (Memory-augmented Deep Autoencoder)
 
-* DSEBM (Deep Structed Energy Based Models for Anomaly Detection)
-  * https://arxiv.org/abs/1605.07717 (ICML 2016)
- 
-* MEMAE (Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection)
-  * https://arxiv.org/abs/1904.02639 (ICCV 2019)   
-  I followed the experimental details and hyperparmeters from the paper in **4.3 Experiments on Cybersecurity Data** except input shape of the encoder and output of the decoder. (It depends on the data preprocessing)   
-  Also, I referenced author's code ([3d-conv MEMAE](https://github.com/donggong1/memae-anomaly-detection)). This implementation is about fc-MEMAE.
-  
+### DSEBM (Deep Structed Energy Based Models for Anomaly Detection) [[paper](https://arxiv.org/abs/1605.07717)] - ICML 2016   
+To be implemented
+### MEMAE (Memorizing Normality to Detect Anomaly: Memory-augmented Deep Autoencoder for Unsupervised Anomaly Detection) [[paper](https://arxiv.org/abs/1904.02639)] - ICCV 2019    
+I followed the experimental details and hyperparmeters from the paper in **4.3 Experiments on Cybersecurity Data** except input shape of the encoder and output of the decoder. (It depends on the data preprocessing)   
+Also, I referenced author's code ([3d-conv MEMAE](https://github.com/donggong1/memae-anomaly-detection)). This implementation is about fc-MEMAE.   
+```bash
+python main_memae.py
+```
 
 ## To-Do
 - [ ] Implement DSEBM
-- [ ] Solve 'set_seed' problem in MEMAE
+- [ ] set seed implementation
+- [ ] hyperparmeter setting by argument
