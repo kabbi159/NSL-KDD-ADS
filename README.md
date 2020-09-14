@@ -26,6 +26,7 @@ Also, I referenced author's code ([3d-conv MEMAE](https://github.com/donggong1/m
 
 ## Usage
 I edited my code so that multiple models (now, only two models) can be used as "main.py".   
+Supported model (You can use by arugument): dagmm, memae 
 You can run this code:
 ```bash
 python main.py \
