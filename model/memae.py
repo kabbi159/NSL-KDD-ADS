@@ -55,7 +55,12 @@ class MEMAE(nn.Module):
 
     def compute_loss(self, outputs, target):
         output = outputs['output']
-        loss = torch.nn.MSELoss()(output, target)
+        att = outputs['att']
+        # loss = reconsturction loss + entropy of w
+        recon_loss = torch.nn.MSELoss()(output, target)
+        entropy_loss = torch.mean((-att) * torch.log(att + 1e-12))
+        loss = recon_loss + 0.0002*entropy_loss
+
         return loss
 
     def compute_batch_error(self, outputs, target):
